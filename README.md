@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of nottshcMethods is to …
+The goal of nottshcMethods is to help us analyse our data faster and
+better.
 
 ## Installation
 
@@ -17,10 +18,6 @@ You can install the the development version from
 # install.packages("devtools")
 devtools::install_github("CDU-data-science-team/nottshcMethods")
 ```
-
-## Examples
-
-TODO
 
 ## Code of Conduct
 

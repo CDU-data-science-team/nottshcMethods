@@ -1,6 +1,6 @@
 Package: nottshcMethods
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Helper functions for working with NHS healthcare data by the Data Science Team of the Nottinghamshire Healthcare NHS Foundation Trust
+Version: 0.0.1
 Date: 2021-03-29
 Authors@R: c(
   person("Milan", "Wiedemann", email = "milan.wiedemann@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1991-282X")),
@@ -8,7 +8,7 @@ Authors@R: c(
   person("Lori", "Edwards Suarez", role = c("aut"), comment = c(ORCID = "0000-0002-3448-4344")),
   person("Chris", "Beeley", role = c("aut"), comment = c(ORCID = "0000-0003-2344-9962"))
   )
-Description: What the package does (one paragraph).
+Description: Helper functions for working with NHS healthcare data by the Data Science Team of the Nottinghamshire Healthcare NHS Foundation Trust.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
