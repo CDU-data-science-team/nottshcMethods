@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NOTTSHC ggplot2 theme — theme_nottshc • nottshcMethods</title>
+<title>NOTTSHC CDU data science team ggplot2 theme — theme_nottshc • nottshcMethods</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,10 @@
 
 
 
-<meta property="og:title" content="NOTTSHC ggplot2 theme — theme_nottshc" />
-<meta property="og:description" content="NOTTSHC ggplot2 theme" />
+<meta property="og:title" content="NOTTSHC CDU data science team ggplot2 theme — theme_nottshc" />
+<meta property="og:description" content="A ggplot2 theme with a white panel background, no grid lines,
+large axis and legend titles,
+and increased text padding for better readability." />
 
 
 
@@ -103,31 +105,41 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>NOTTSHC ggplot2 theme</h1>
+    <h1>NOTTSHC CDU data science team ggplot2 theme</h1>
     
     <div class="hidden name"><code>theme_nottshc.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>NOTTSHC ggplot2 theme</p>
+    <p>A ggplot2 theme with a white panel background, no grid lines,
+large axis and legend titles,
+and increased text padding for better readability.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>theme_nottshc</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>theme_nottshc</span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>12</span>, base_family <span class='op'>=</span> <span class='st'>""</span>, box <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>...</th>
-      <td></td>
+      <th>base_size</th>
+      <td><p>Numeric. Base font size; other font sizes and margins
+are adjusted relative to this.</p></td>
+    </tr>
+    <tr>
+      <th>base_family</th>
+      <td><p>Character. Base font family.</p></td>
+    </tr>
+    <tr>
+      <th>box</th>
+      <td><p>Logical. Indicates whether to draw a box around the plot.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    
-
-
+    <p>Some of this theme is borrowed with thanks from
+https://github.com/crsh/papaja, see https://github.com/crsh/papaja/blob/master/R/theme_apa.R.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
