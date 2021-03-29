@@ -2,16 +2,24 @@
 % Please edit documentation in R/theme.R
 \name{theme_nottshc}
 \alias{theme_nottshc}
-\title{NOTTSHC ggplot2 theme}
+\title{NOTTSHC CDU data science team ggplot2 theme}
 \usage{
-theme_nottshc(...)
+theme_nottshc(base_size = 12, base_family = "", box = FALSE)
 }
 \arguments{
-\item{...}{}
-}
-\value{
+\item{base_size}{Numeric. Base font size; other font sizes and margins
+are adjusted relative to this.}
 
+\item{base_family}{Character. Base font family.}
+
+\item{box}{Logical. Indicates whether to draw a box around the plot.}
 }
 \description{
-NOTTSHC ggplot2 theme
+A ggplot2 theme with a white panel background, no grid lines,
+large axis and legend titles,
+and increased text padding for better readability.
+}
+\details{
+Some of this theme is borrowed with thanks from
+https://github.com/crsh/papaja, see https://github.com/crsh/papaja/blob/master/R/theme_apa.R.
 }
