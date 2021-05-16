@@ -1,0 +1,214 @@
+---
+title: "CDU Data Science Team &mdash; slides"
+subtitle: "Branded slides in R"
+author: "Zoë Turner"
+institute: "Nottinghamshire Healthcare NHS Foundation Trust"
+date: "March 2021"
+output:
+  xaringan::moon_reader:
+    css: 
+      - default
+      - css/nhsr.css
+      - css/nhsr-fonts.css
+    lib_dir: libs
+    seal: false
+    self_contained: true
+    nature:
+      highlightStyle: googlecode
+      highlightLines: true
+      highlightLanguage: ["r"]
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+class: title-slide, left, bottom
+
+```{r setup, include = FALSE}
+library(knitr)
+library(tidyverse)
+
+### Packages not on CRAN ###
+
+# install.packages("remotes")
+# remotes::install_github("mitchelloharawild/icon")
+library(icon) # icons need to be loaded to view so run following code if not already done
+# icon::download_fontawesome()
+
+# install.packages("devtools")
+#devtools::install_github("gadenbuie/xaringanExtra")
+library(xaringanExtra)
+xaringanExtra::use_share_again() # need to get the slide button on html view
+
+# install.packages("devtools")
+# devtools::install_github('nhs-r-community/nhsrtheme')
+library(nhsrtheme)
+
+
+# set default options
+opts_chunk$set(echo = FALSE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300,
+               dev.args = list(type = "cairo"),
+               eval = TRUE,
+               warning = FALSE,
+               message = FALSE,
+               error = FALSE)
+
+# uncomment the following lines if you want to use the NHS-R theme colours by default
+# scale_fill_continuous <- partial(scale_fill_nhs, discrete = FALSE)
+# scale_fill_discrete <- partial(scale_fill_nhs, discrete = TRUE)
+# scale_colour_continuous <- partial(scale_colour_nhs, discrete = FALSE)
+# scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
+
+```
+
+```{r echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "img/nottshc.PNG",
+  exclude_class = c("title-slide", "inverse", "hide-logo"),
+  width = "300px",
+  height = "200px",
+  position = css_position(top = "0em", right = "1em")
+)
+
+```
+
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author` | `r rmarkdown::metadata$date`
+</br>
+
+---
+class: inverse, middle, center
+
+# An inverse slide
+
+### Often used for transitions
+
+Links on an inverse slide would look like<br/>[this one leading to acknowledgements](#acknowledgement)
+
+---
+class: inverse-white, middle, center
+
+# A white background inverse slide
+
+### To remove bottom image
+
+If slides overrun the bottom image this slide can be used to remove the image completely - keeping the logo unless hide-logo added to `class:` like<br/>[this one leading to a table that overruns the background](#line-highlight)
+
+---
+
+# Bullets and text color
+
+--
+
+* first point
+
+--
+
+* second point
+
+--
+
+* third point
+
+--
+
+-----
+
+You can emphasize text with color:
+
+* .blue[Blue]
+* .green[Green]
+* .pink[Pink]
+* .red[Red]
+* .warmyellow[Warm Yellow]
+
+--
+
+And make it **bold** or _italicized_ using Markdown:
+
+* .blue[**Bold** or _italicized_]
+* .green[**Bold** or _italicized_]
+* .pink[**Bold** or _italicized_]
+* .red[**Bold** or _italicized_]
+* .warmyellow[**Bold** or _italicized_]
+
+---
+# Tables and quotes
+
+### Table
+
+```{r}
+knitr::kable(head(iris), format = 'html')
+```
+
+### Quote
+
+> This is what a quote looks like.
+
+---
+class: inverse-white
+
+name: line-highlight
+
+# Line highlighting
+
+An example of using the trailing comment `#<<` to highlight lines:
+
+### Code
+
+````markdown
+`r ''````{r tidy=FALSE}
+library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #<<
+  geom_smooth()    #<<
+```
+````
+
+### Output
+
+```{r tidy=FALSE, eval=FALSE, echo=TRUE}
+library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #<<
+  geom_smooth()    #<<
+```
+
+---
+
+class: inverse-white
+
+# Footnotes
+
+Footnotes overrun the slide background image so this is footnote to use with inverse-white or inverse.
+
+.footnote[The **nhsr theme** was designed by [Silvia Canelon](https://silvia.rbind.io) for, and with feedback from, the [NHS-R Community](https://github.com/nhs-r-community), following the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/).]
+
+---
+
+# Footnotes with template slides
+
+Footnotes with a background need to be called with `footnote-background`. To alter in `nhsr.css` change `margin-top:` 
+
+.footnote-background[The **nhsr theme** was designed by [Silvia Canelon](https://silvia.rbind.io) for, and with feedback from, the [NHS-R Community](https://github.com/nhs-r-community), following the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/).</br>]
+
+
+---
+class: inverse
+
+name: acknowledgement
+
+# Acknowledgments
+
+Acknowledgements: the professional look of this presentation, using NHS and Nottinghamshire Healthcare NHS Foundation Trust colour branding, exists because of the amazing work of Silvia Canelón, details of the workshops she ran at the [NHS-R Community conference](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html).
+
+[`r icon::fontawesome("twitter")` @DataScienceNott](https://twitter.com/DataScienceNott)<br/>
+[`r icon::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)<br/>
+[`r icon::fontawesome("paper-plane")` zoe.turner2@notthshc.nhs.uk](mailto:zoe.turner2@nottshc.nhs.uk)
+
