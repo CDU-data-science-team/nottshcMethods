@@ -8,8 +8,8 @@ output:
   xaringan::moon_reader:
     css: 
       - default
-      - nhsr.css
-      - nhsr-fonts.css
+      - css/nhsr.css
+      - css/nhsr-fonts.css
     lib_dir: libs
     seal: false
     self_contained: true
@@ -64,7 +64,7 @@ opts_chunk$set(echo = FALSE,
 
 ```{r echo=FALSE}
 xaringanExtra::use_logo(
-  image_url = "nottshc.png",
+  image_url = "img/nottshc.PNG",
   exclude_class = c("title-slide", "inverse", "hide-logo"),
   width = "300px",
   height = "200px",

@@ -76,7 +76,7 @@ hr {
 }
 
 .remark-slide-content {
-  background-image:    url(subsequent-slide.png);
+  background-image:    url(../img/subsequent-slide.PNG);
   background-size:     cover;
 }
 
@@ -171,7 +171,7 @@ blockquote {
 
 /*-- NHS organisation logo --*/
 .title-slide {
-  background-image:    url(slide-background.PNG);
+  background-image:    url(../img/slide-background.PNG);
   background-size:     cover;
 
 }
