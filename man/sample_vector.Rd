@@ -20,3 +20,9 @@ A ggplot2 theme with a white panel background, no grid lines,
 large axis and legend titles,
 and increased text padding for better readability.
 }
+\examples{
+sample_vector(values = c(NA, "Male", "Female", "Other"),
+weights = c(10, 50, 50, 2),
+length = 100)
+
+}
