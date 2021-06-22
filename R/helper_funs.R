@@ -1,13 +1,21 @@
 #' Categorise continuous age into age groups
 #'
-#' @param var Variable name
-#' @param min Numeric, minimum age
-#' @param max Numeric, maximum age
+#' @param var Name of variable or vector
+#' @param min Numeric, specifying the minimum age of the first age group.
+#' Age values lower than this will be returned as missing values (NA)
+#' @param max Numeric, specifying the upper end of the last age group
 #' @param by Numeric, increment of the age categories
-#' @param method
+#' @param method String, specyfing the method to be used for grouping age into categories.
+#' Details about the different methods are available here:
+#' "user_defined", "ons_1", "ons_2", "nhs_survey" ... TODO
+#'
 #'
 #' @return
 #' @export
+#' @examples
+#' set.seed(123)
+#' age <- sample(1:100, 100, replace = T)
+#' as_age_groups(age)
 as_age_groups <- function(var, min = 0, max = 100, by = 10,
                           grouping_method = c("user_defined", "ons_1", "ons_2", "nhs_survey")) {
 

@@ -13,19 +13,27 @@ as_age_groups(
 )
 }
 \arguments{
-\item{var}{Variable name}
+\item{var}{Name of variable or vector}
 
-\item{min}{Numeric, minimum age}
+\item{min}{Numeric, specifying the minimum age of the first age group.
+Age values lower than this will be returned as missing values (NA)}
 
-\item{max}{Numeric, maximum age}
+\item{max}{Numeric, specifying the upper end of the last age group}
 
 \item{by}{Numeric, increment of the age categories}
 
-\item{method}{}
+\item{method}{String, specyfing the method to be used for grouping age into categories.
+Details about the different methods are available here:
+"user_defined", "ons_1", "ons_2", "nhs_survey" ... TODO}
 }
 \value{
 
 }
 \description{
 Categorise continuous age into age groups
+}
+\examples{
+set.seed(123)
+age <- sample(1:100, 100, replace = T)
+as_age_groups(age)
 }
