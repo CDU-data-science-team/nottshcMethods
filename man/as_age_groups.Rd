@@ -4,7 +4,13 @@
 \alias{as_age_groups}
 \title{Categorise continuous age into age groups}
 \usage{
-as_age_groups(var, min = 0, max = 100, by = 10)
+as_age_groups(
+  var,
+  min = 0,
+  max = 100,
+  by = 10,
+  grouping_method = c("user_defined", "ons_1", "ons_2", "nhs_survey")
+)
 }
 \arguments{
 \item{var}{Variable name}
@@ -14,6 +20,8 @@ as_age_groups(var, min = 0, max = 100, by = 10)
 \item{max}{Numeric, maximum age}
 
 \item{by}{Numeric, increment of the age categories}
+
+\item{method}{}
 }
 \value{
 
