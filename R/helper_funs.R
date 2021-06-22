@@ -13,9 +13,14 @@
 #' @return
 #' @export
 #' @examples
+#' # Example using a vector:
 #' set.seed(123)
 #' age <- sample(1:100, 100, replace = T)
 #' as_age_groups(age)
+#'
+#' # Example using a data frame
+#' tibble::tibble(age = sample(1:115, 100, replace = T)) %>%
+#'   dplyr::mutate(age_groups = as_age_groups(age, min = 10, max = 100))
 as_age_groups <- function(var, min = 0, max = 100, by = 10,
                           grouping_method = c("user_defined", "ons_1", "ons_2", "nhs_survey")) {
 

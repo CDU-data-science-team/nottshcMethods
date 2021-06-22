@@ -33,7 +33,12 @@ Details about the different methods are available here:
 Categorise continuous age into age groups
 }
 \examples{
+# Example using a vector:
 set.seed(123)
 age <- sample(1:100, 100, replace = T)
 as_age_groups(age)
+
+# Example using a data frame
+tibble::tibble(age = sample(1:115, 100, replace = T)) \%>\%
+  dplyr::mutate(age_groups = as_age_groups(age, min = 10, max = 100))
 }
