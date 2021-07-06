@@ -33,3 +33,46 @@ theme_nottshc <- function(base_size = 12, base_family = "", box = FALSE) {
 
   adapted_theme
 }
+
+
+#' Convert ggplot object into plotly
+#'
+#' @description There are some problems with x and y axis labels when converting
+#' ggplot2 to plotly, especially when using facets. This fun has a workaround that is not perfect.
+#'
+#'
+#' @param ggplot ggplot2 object
+#' @param xtitle String, x lab title
+#' @param ytitle String, y lab title
+#' @param aes_txt_tooltip Logical, specifying whether or not to use tooltip
+#' @param display_mode_bar Logical, specifying whether to show the annoying
+#' mode bar from plotly, FALSE by default!
+#'
+#' @return
+#' @export
+#'
+#' @examples
+ggplotly_nottshc <- function(ggplot, xtitle = NULL, ytitle = NULL,
+                             aes_txt_tooltip = TRUE,
+                             display_mode_bar = FALSE) {
+
+  if (aes_txt_tooltip == TRUE) {
+    ggplotly_nottshc <- ggplot %>%
+      plotly::ggplotly(tooltip = "text")
+  }
+
+  if (display_mode_bar == FALSE) {
+    ggplotly_nottshc <- ggplotly_nottshc %>%
+      plotly::config(displayModeBar = FALSE)
+  }
+
+
+  x <- list(title = xtitle)
+  y <- list(title = ytitle)
+
+  ggplotly_nottshc <- ggplotly_nottshc %>%
+    plotly::layout(xaxis = x, yaxis = y)
+
+  return(ggplotly_nottshc)
+
+}
