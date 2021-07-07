@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>License • nottshcMethods</title>
+<title>CDU data science team ggplot2 theme — sample_vector • nottshcMethods</title>
 
 
 <!-- jquery -->
@@ -18,8 +18,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
 <!-- bootstrap-toc -->
-<link rel="stylesheet" href="bootstrap-toc.css">
-<script src="bootstrap-toc.js"></script>
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
@@ -33,13 +33,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script>
 
 
 
 
-<meta property="og:title" content="License" />
+<meta property="og:title" content="CDU data science team ggplot2 theme — sample_vector" />
+<meta property="og:description" content="A ggplot2 theme with a white panel background, no grid lines,
+large axis and legend titles,
+and increased text padding for better readability." />
 
 
 
@@ -58,7 +61,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-title-body">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -70,7 +73,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">nottshcMethods</a>
+        <a class="navbar-link" href="../index.html">nottshcMethods</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
@@ -78,13 +81,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -100,25 +103,66 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>License</h1>
+    <h1>CDU data science team ggplot2 theme</h1>
+    
+    <div class="hidden name"><code>sample_vector.Rd</code></div>
     </div>
 
-<pre>YEAR: 2021
-COPYRIGHT HOLDER: Nottinghamshire Healthcare NHS Foundation Trust
-</pre>
+    <div class="ref-description">
+    <p>A ggplot2 theme with a white panel background, no grid lines,
+large axis and legend titles,
+and increased text padding for better readability.</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>sample_vector</span><span class='op'>(</span><span class='va'>values</span>, <span class='va'>weights</span>, <span class='va'>length</span><span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>values</th>
+      <td><p>Vector- the thing you want to sample from</p></td>
+    </tr>
+    <tr>
+      <th>weights</th>
+      <td><p>vector of integers the same length as values- the proportions
+with which you want to sample</p></td>
+    </tr>
+    <tr>
+      <th>length</th>
+      <td><p>integer- how long you want the return value to be- e.g. the
+number of rows in a dataframe</p></td>
+    </tr>
+    </table>
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>sample_vector</span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='st'>"Male"</span>, <span class='st'>"Female"</span>, <span class='st'>"Other"</span><span class='op'>)</span>,
+weights <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10</span>, <span class='fl'>50</span>, <span class='fl'>50</span>, <span class='fl'>2</span><span class='op'>)</span>,
+length <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;   [1] "Other"  "Male"   "Male"   "Male"   "Female" "Female" "Female" "Female"
+#&gt;   [9] "Female" "Female" "Female" "Female" "Female" NA       "Male"   "Male"  
+#&gt;  [17] "Male"   "Male"   "Male"   "Female" "Male"   "Male"   "Male"   "Male"  
+#&gt;  [25] "Female" "Female" "Female" "Male"   "Male"   "Male"   "Male"   "Female"
+#&gt;  [33] "Male"   "Male"   "Male"   "Female" "Male"   "Female" "Male"   "Male"  
+#&gt;  [41] "Female" "Female" "Male"   "Male"   "Male"   "Female" "Male"   "Female"
+#&gt;  [49] "Female" "Female" "Female" "Male"   "Female" "Female" "Female" "Female"
+#&gt;  [57] "Male"   "Female" "Male"   "Female" "Female" "Male"   "Female" NA      
+#&gt;  [65] NA       "Male"   "Male"   "Other"  "Female" NA       "Female" "Male"  
+#&gt;  [73] "Female" "Male"   "Female" "Male"   NA       "Female" "Female" "Male"  
+#&gt;  [81] "Female" "Male"   "Male"   "Male"   "Male"   "Female" "Male"   "Male"  
+#&gt;  [89] "Female" "Male"   "Female" "Male"   "Male"   "Female" NA       "Male"  
+#&gt;  [97] NA       "Female" "Female" "Male"  </div><div class='input'>
+</div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
-
 
 
       <footer>
