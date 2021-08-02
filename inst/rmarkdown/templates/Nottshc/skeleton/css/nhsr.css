@@ -75,6 +75,11 @@ hr {
   background-color:   #E8EDEE;
 }
 
+.remark-slide-content {
+  background-image:    url(../img/subsequent-slide.PNG);
+  background-size:     cover;
+}
+
 /*-- CODE CHUNKS --*/
 
 /*-- Code chunk background layer --*/
@@ -163,6 +168,14 @@ blockquote {
 }
 
 /*-- CUSTOM CLASS FOR THE TITLE SLIDE --*/
+
+/*-- NHS organisation logo --*/
+.title-slide {
+  background-image:    url(../img/slide-background.PNG);
+  background-size:     cover;
+
+}
+
 
 /*-- Headings --*/
 .title-slide h1 {
