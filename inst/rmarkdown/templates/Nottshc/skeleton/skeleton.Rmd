@@ -3,9 +3,12 @@ title: "CDU Data Science Team &mdash; slides"
 subtitle: "Branded slides in R"
 author: "Zoë Turner"
 institute: "Nottinghamshire Healthcare NHS Foundation Trust"
-date: "March 2021"
+date: "August 2021" 
 output:
   xaringan::moon_reader:
+    includes: 
+      after_body: 
+        - insert-logo.html
     css: 
       - default
       - css/nhsr.css
@@ -20,6 +23,7 @@ output:
       countIncrementalSlides: false
       ratio: "16:9"
 ---
+
 class: title-slide, left, bottom
 
 ```{r setup, include = FALSE}
@@ -63,21 +67,24 @@ opts_chunk$set(echo = FALSE,
 ```
 
 ```{r echo=FALSE}
+# Adds logo to all slides
+
 xaringanExtra::use_logo(
-  image_url = "img/nottshc.PNG",
-  exclude_class = c("title-slide", "inverse", "hide-logo"),
+  image_url = "https://cdu-data-science-team.github.io/assets//logo/nottshc-logo.jpg",
+  exclude_class = c("inverse", "hide-logo"),
   width = "300px",
   height = "200px",
   position = css_position(top = "0em", right = "1em")
 )
-
 ```
-
 
 # `r rmarkdown::metadata$title`
 ----
 ## **`r rmarkdown::metadata$subtitle`**
 ### `r rmarkdown::metadata$author` | `r rmarkdown::metadata$date`
+</br>
+</br>
+</br>
 </br>
 
 ---
@@ -150,7 +157,7 @@ knitr::kable(head(iris), format = 'html')
 > This is what a quote looks like.
 
 ---
-class: inverse-white
+class: inverse-white, hide-logo
 
 name: line-highlight
 
