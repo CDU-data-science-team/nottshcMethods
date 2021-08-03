@@ -68,6 +68,7 @@ opts_chunk$set(echo = FALSE,
 
 xaringanExtra::use_logo(
   image_url = "https://cdu-data-science-team.github.io/assets/logo/nottshc-cdu-data-science-logo-800.png",
+  link_url = "https://cdu-data-science-team.github.io/team-blog/",
   exclude_class = c("inverse", "hide-logo"),
   width = "300px",
   height = "200px",
@@ -164,19 +165,19 @@ An example of using the trailing comment `#<<` to highlight lines:
 
 ### Code
 
-````markdown
-`r ''````{r tidy=FALSE}
+```{r example, tidy=FALSE, eval=FALSE, echo=TRUE}
 library(ggplot2)
 ggplot(mtcars) + 
   aes(mpg, disp) + 
   geom_point() +   #<<
   geom_smooth()    #<<
 ```
-````
+
+---
 
 ### Output
 
-```{r tidy=FALSE, eval=FALSE, echo=TRUE}
+```{r ref.label="example", eval=TRUE, echo=FALSE}
 library(ggplot2)
 ggplot(mtcars) + 
   aes(mpg, disp) + 
@@ -192,7 +193,7 @@ class: inverse-white, hide-logo
 
 The logo can be removed from a slide where the title overruns by using class: hide-logo
 
-.footnote[The **nhsr theme** was designed by [Silvia Canelon](https://silvia.rbind.io) for, and with feedback from, the [NHS-R Community](https://github.com/nhs-r-community), following the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/).]
+.footnote[The **nhsr theme** was designed by [Silvia Canelon](https://silvia.rbind.io) for, and with feedback from, the [NHS-R Community](https://github.com/nhs-r-community), following the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/). Note that the xaringan share overlaps the footnotes if there are any hyperlinks.]
 
 ---
 class: inverse
