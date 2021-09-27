@@ -23,4 +23,14 @@ Imports:
     plotly,
     scales,
     ggplot2,
-    lubridate
+    lubridate,
+    knitr,
+    icons (>= 0.2.0),
+    xaringanExtra (>= 0.5.4),
+    nhsrtheme (>= 0.1.0),
+    magrittr,
+    shinydashboard
+Remotes: 
+    mitchelloharawild/icons,
+    gadenbuie/xaringanExtra,
+    nhs-r-community/nhsrtheme
