@@ -1,12 +1,8 @@
 /*-- LINKS/ANCHORS --*/
-a {
-  color:              #005EB8;
-  border-bottom:      2px solid #005EB8;
-  line-height:        1.5em;
-}
-
-a:hover {
-  border-bottom:      0px;
+a,
+a>code {
+  color: #005EB8;
+  text-decoration: underline;
 }
 
 /*-- HEADINGS --*/
@@ -140,11 +136,7 @@ blockquote {
 /*-- Links/anchors (inverse) --*/
 .inverse a {
   color:              white;
-  border-bottom:      2px solid white;
-}
-
-.inverse a:hover {
-  border-bottom: none;
+  text-decoration:    underline;
 }
 
 /*-- Slide background and text (inverse-white) --*/

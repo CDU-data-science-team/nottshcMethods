@@ -29,11 +29,11 @@ You can install the the development version from [GitHub](https://github.com/) w
 devtools::install_github("CDU-data-science-team/nottshcMethods")
 ```
 
-## Nottinghamshire Healthcare NHS Foundation Trust slides
+## Slide and distill post templates
 
-Once the package is installed, {xaringan} presentation slides with Nottinghamshire Healthcare NHS Foundation Trust branding can be access easily using the RStudio IDE, by selecting `File` -\> `R markdown ...` -\> `From Template`.
+Once the package is installed, {xaringan} presentation slides with branding and {distill} post templates can be access easily using the RStudio IDE, by selecting `File` -\> `R markdown ...` -\> `From Template`.
 
-```{r, echo = FALSE, out.width="50%"}
+```{r, echo = FALSE, out.width="50%", fig.alt="Screenshot of the templates wizard selection list with Nottshc Presentation Slides highlighted"}
 knitr::include_graphics("img/screen-capture-templates.png")
 ```
 
