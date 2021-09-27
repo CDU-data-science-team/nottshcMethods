@@ -23,9 +23,6 @@ calc_monthly_freq(
 
 \item{.calc_year_month_day_vars}{Logical, specifying whether to calculate separate year, month, and day variable}
 }
-\value{
-
-}
 \description{
 Calculate frequencies of groups per month
 }

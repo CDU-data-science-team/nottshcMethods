@@ -22,12 +22,9 @@ Age values lower than this will be returned as missing values (NA)}
 
 \item{by}{Numeric, increment of the age categories}
 
-\item{method}{String, specyfing the method to be used for grouping age into categories.
+\item{grouping_method}{String, specifying the method to be used for grouping age into categories.
 Details about the different methods are available here:
 "user_defined", "ons_1", "ons_2", "nhs_survey" ... TODO}
-}
-\value{
-
 }
 \description{
 Categorise continuous age into age groups
@@ -35,10 +32,10 @@ Categorise continuous age into age groups
 \examples{
 # Example using a vector:
 set.seed(123)
-age <- sample(1:100, 100, replace = T)
+age <- sample(1:100, 100, replace = TRUE)
 as_age_groups(age)
 
 # Example using a data frame
-tibble::tibble(age = sample(1:115, 100, replace = T)) \%>\%
+tibble::tibble(age = sample(1:115, 100, replace = TRUE)) \%>\%
   dplyr::mutate(age_groups = as_age_groups(age, min = 10, max = 100))
 }

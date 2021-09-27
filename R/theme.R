@@ -48,7 +48,6 @@ theme_nottshc <- function(base_size = 12, base_family = "", box = FALSE) {
 #' @param display_mode_bar Logical, specifying whether to show the annoying
 #' mode bar from plotly, FALSE by default!
 #'
-#' @return
 #' @export
 #'
 #' @examples

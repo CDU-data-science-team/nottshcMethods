@@ -24,9 +24,6 @@ ggplotly_nottshc(
 \item{display_mode_bar}{Logical, specifying whether to show the annoying
 mode bar from plotly, FALSE by default!}
 }
-\value{
-
-}
 \description{
 There are some problems with x and y axis labels when converting
 ggplot2 to plotly, especially when using facets. This fun has a workaround that is not perfect.

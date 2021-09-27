@@ -29,7 +29,9 @@ Imports:
     xaringanExtra (>= 0.5.4),
     nhsrtheme (>= 0.1.0),
     magrittr,
-    shinydashboard
+    shinydashboard,
+    digest,
+    tibble
 Remotes: 
     mitchelloharawild/icons,
     gadenbuie/xaringanExtra,
