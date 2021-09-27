@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # nottshcMethods
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/CDU-data-science-team/nottshcMethods/workflows/R-CMD-check/badge.svg)](https://github.com/CDU-data-science-team/nottshcMethods/actions)
 <!-- badges: end -->
 
 The goal of nottshcMethods is to help us analyse our data faster and better.
