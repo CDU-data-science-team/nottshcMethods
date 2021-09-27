@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NOTTSHC CDU data science team ggplot2 theme — theme_nottshc • nottshcMethods</title>
+<title>Categorise continuous age into age groups — as_age_groups • nottshcMethods</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,8 @@
 
 
 
-<meta property="og:title" content="NOTTSHC CDU data science team ggplot2 theme — theme_nottshc" />
-<meta property="og:description" content="A ggplot2 theme with a white panel background, no grid lines,
-large axis and legend titles,
-and increased text padding for better readability." />
+<meta property="og:title" content="Categorise continuous age into age groups — as_age_groups" />
+<meta property="og:description" content="Categorise continuous age into age groups" />
 
 
 
@@ -105,42 +103,76 @@ and increased text padding for better readability." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>NOTTSHC CDU data science team ggplot2 theme</h1>
+    <h1>Categorise continuous age into age groups</h1>
     
-    <div class="hidden name"><code>theme_nottshc.Rd</code></div>
+    <div class="hidden name"><code>as_age_groups.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>A ggplot2 theme with a white panel background, no grid lines,
-large axis and legend titles,
-and increased text padding for better readability.</p>
+    <p>Categorise continuous age into age groups</p>
     </div>
 
-    <pre class="usage"><span class='fu'>theme_nottshc</span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>12</span>, base_family <span class='op'>=</span> <span class='st'>""</span>, box <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>as_age_groups</span><span class='op'>(</span>
+  <span class='va'>var</span>,
+  min <span class='op'>=</span> <span class='fl'>0</span>,
+  max <span class='op'>=</span> <span class='fl'>100</span>,
+  by <span class='op'>=</span> <span class='fl'>10</span>,
+  grouping_method <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"user_defined"</span>, <span class='st'>"ons_1"</span>, <span class='st'>"ons_2"</span>, <span class='st'>"nhs_survey"</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>base_size</th>
-      <td><p>Numeric. Base font size; other font sizes and margins
-are adjusted relative to this.</p></td>
+      <th>var</th>
+      <td><p>Name of variable or vector</p></td>
     </tr>
     <tr>
-      <th>base_family</th>
-      <td><p>Character. Base font family.</p></td>
+      <th>min</th>
+      <td><p>Numeric, specifying the minimum age of the first age group.
+Age values lower than this will be returned as missing values (NA)</p></td>
     </tr>
     <tr>
-      <th>box</th>
-      <td><p>Logical. Indicates whether to draw a box around the plot.</p></td>
+      <th>max</th>
+      <td><p>Numeric, specifying the upper end of the last age group</p></td>
+    </tr>
+    <tr>
+      <th>by</th>
+      <td><p>Numeric, increment of the age categories</p></td>
+    </tr>
+    <tr>
+      <th>method</th>
+      <td><p>String, specyfing the method to be used for grouping age into categories.
+Details about the different methods are available here:
+"user_defined", "ons_1", "ons_2", "nhs_survey" ... TODO</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Some of this theme is borrowed with thanks from
-https://github.com/crsh/papaja, see https://github.com/crsh/papaja/blob/master/R/theme_apa.R.</p>
+    
 
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'># Example using a vector:</span>
+<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>123</span><span class='op'>)</span>
+<span class='va'>age</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>100</span>, <span class='fl'>100</span>, replace <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+<span class='fu'>as_age_groups</span><span class='op'>(</span><span class='va'>age</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;   [1] 30-39 70-79 50-59 10-19 60-69 40-49 50-59 40-49 10-19 20-29 90-99 90-99
+#&gt;  [13] 60-69 90-99 50-59 90-99 0-9   90-99 90-99 70-79 20-29 0-9   40-49 0-9  
+#&gt;  [25] 80-89 30-39 70-79 80-89 40-49 70-79 10-19 30-39 0-9   0-9   40-49 70-79
+#&gt;  [37] 20-29 20-29 60-69 50-59 0-9   50-59 20-29 90-99 30-39 80-89 30-39 90-99
+#&gt;  [49] 60-69 70-79 70-79 60-69 10-19 80-89 90-99 90-99 20-29 30-39 20-29 70-79
+#&gt;  [61] 40-49 40-49 90-99 60-69 90-99 10-19 90-99 0-9   70-79 80-89 80-89 30-39
+#&gt;  [73] 30-39 80-89 50-59 30-39 0-9   10-19 60-69 20-29 50-59 20-29 80-89 30-39
+#&gt;  [85] 20-29 80-89 30-39 40-49 30-39 10-19 30-39 30-39 60-69 90-99 10-19 90-99
+#&gt;  [97] 90-99 70-79 60-69 20-29
+#&gt; Levels: 0-9 10-19 20-29 30-39 40-49 50-59 60-69 70-79 80-89 90-99 100+</div><div class='input'>
+<span class='co'># Example using a data frame</span>
+<span class='fu'>tibble</span><span class='fu'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span><span class='op'>(</span>age <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>115</span>, <span class='fl'>100</span>, replace <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>age_groups <span class='op'>=</span> <span class='fu'>as_age_groups</span><span class='op'>(</span><span class='va'>age</span>, min <span class='op'>=</span> <span class='fl'>10</span>, max <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in tibble::tibble(age = sample(1:115, 100, replace = T)) %&gt;% dplyr::mutate(age_groups = as_age_groups(age,     min = 10, max = 100)): could not find function "%&gt;%"</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
