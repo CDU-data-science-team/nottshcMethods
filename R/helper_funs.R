@@ -79,7 +79,7 @@ calc_monthly_freq <- function(data,
 
   if (.drop_latest_month) {
 
-    max_date_m <- max(data$floor_date_m)
+    max_date_m <- max(data$floor_date_m, na.rm = TRUE)
 
     data <- data %>%
       dplyr::filter(floor_date_m != max_date_m)

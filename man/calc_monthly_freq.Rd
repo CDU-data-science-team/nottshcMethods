@@ -19,9 +19,11 @@ calc_monthly_freq(
 
 \item{date_var_name}{String specifying date variable, needs to be class date}
 
-\item{.drop_latest_month}{Logical, specifying whether or not to drop the most recent month}
+\item{.drop_latest_month}{Logical, specifying whether or not to drop the most
+recent month}
 
-\item{.calc_year_month_day_vars}{Logical, specifying whether to calculate separate year, month, and day variable}
+\item{.calc_year_month_day_vars}{Logical, specifying whether to calculate
+separate year, month, and day variable}
 }
 \description{
 Calculate frequencies of groups per month
