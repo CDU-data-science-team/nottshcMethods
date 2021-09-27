@@ -4,6 +4,8 @@
 # nottshcMethods
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/CDU-data-science-team/nottshcMethods/workflows/R-CMD-check/badge.svg)](https://github.com/CDU-data-science-team/nottshcMethods/actions)
 <!-- badges: end -->
 
 The goal of nottshcMethods is to help us analyse our data faster and
@@ -15,8 +17,8 @@ You can install the the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("CDU-data-science-team/nottshcMethods")
+# install.packages("remotes")
+remotes::install_github("CDU-data-science-team/nottshcMethods")
 ```
 
 ## Slide and distill post templates

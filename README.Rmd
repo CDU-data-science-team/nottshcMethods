@@ -26,8 +26,8 @@ The goal of nottshcMethods is to help us analyse our data faster and better.
 You can install the the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("CDU-data-science-team/nottshcMethods")
+# install.packages("remotes")
+remotes::install_github("CDU-data-science-team/nottshcMethods")
 ```
 
 ## Slide and distill post templates
