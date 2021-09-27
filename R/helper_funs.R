@@ -20,7 +20,7 @@
 #' # Example using a data frame
 #' tibble::tibble(age = sample(1:115, 100, replace = TRUE)) %>%
 #'   dplyr::mutate(age_groups = as_age_groups(age, min = 10, max = 100))
-as_age_groups <- function(var, min = 0, max = 100, by = 10,
+as_age_groups <- function(var, min = 0, max = 120, by = 10,
                           grouping_method = c("user_defined",
                                               "ons_1",
                                               "ons_2",
