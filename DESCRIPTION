@@ -3,12 +3,12 @@ Title: Helper functions for working with NHS healthcare data by the Data Science
 Version: 0.2.0
 Date: 2021-07-07
 Authors@R: c(
-  person("Milan", "Wiedemann", email = "milan.wiedemann@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1991-282X")),
-  person("Zoe", "Turner", role = c("aut"), comment = c(ORCID = "0000-0003-1033-9158")),
-  person("Lori", "Edwards Suarez", role = c("aut"), comment = c(ORCID = "0000-0002-3448-4344")),
+  person("Zoë", "Turner", email = "zoe.turner2@nottshc.nhs.uk", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1033-9158")),
+  person("Milan", "Wiedemann", role = c("aut"), comment = c(ORCID = "0000-0003-1991-282X")),
+  person("Lori", "Edwards Suárez", role = c("aut"), comment = c(ORCID = "0000-0002-3448-4344")),
   person("Chris", "Beeley", role = c("aut"), comment = c(ORCID = "0000-0003-2344-9962"))
   )
-Description: Helper functions for working with NHS healthcare data by the Data Science Team of the Nottinghamshire Healthcare NHS Foundation Trust.
+Description: Helper functions and templates for working with NHS healthcare data by the Data Science Team of the Nottinghamshire Healthcare NHS Foundation Trust.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
