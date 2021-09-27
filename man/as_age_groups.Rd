@@ -7,7 +7,7 @@
 as_age_groups(
   var,
   min = 0,
-  max = 100,
+  max = 120,
   by = 10,
   grouping_method = c("user_defined", "ons_1", "ons_2", "nhs_survey")
 )
