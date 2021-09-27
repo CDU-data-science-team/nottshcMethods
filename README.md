@@ -19,14 +19,14 @@ You can install the the development version from
 devtools::install_github("CDU-data-science-team/nottshcMethods")
 ```
 
-## Nottinghamshire Healthcare NHS Foundation Trust slides
+## Slide and distill post templates
 
-Once the package is installed, xaringan presentation slides with
-Nottinghamshire Healthcare NHS Foundation Trust branding can be access
-easily using the RStudio IDE, by selecting `File` -&gt; `R markdown ...`
--&gt; `From Template`.
+Once the package is installed, {xaringan} presentation slides with
+branding and {distill} post templates can be access easily using the
+RStudio IDE, by selecting `File` -&gt; `R markdown ...` -&gt;
+`From Template`.
 
-<img src="img/screen-capture-templates.png" width="50%" />
+<img src="img/screen-capture-templates.png" title="Screenshot of the templates wizard selection list with Nottshc Presentation Slides highlighted" alt="Screenshot of the templates wizard selection list with Nottshc Presentation Slides highlighted" width="50%" />
 
 ## Code of Conduct
 
