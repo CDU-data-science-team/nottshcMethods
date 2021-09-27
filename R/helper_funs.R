@@ -75,36 +75,36 @@ calc_monthly_freq <- function(data,
   data <- data %>%
     dplyr::mutate(floor_date_m = lubridate::floor_date( {{date_var_name}} ,
                                                         unit = "month"),
-                  floor_date_m = lubridate::as_date(floor_date_m))
+                  floor_date_m = lubridate::as_date(.data$floor_date_m))
 
   if (.drop_latest_month) {
 
     max_date_m <- max(data$floor_date_m, na.rm = TRUE)
 
     data <- data %>%
-      dplyr::filter(floor_date_m != max_date_m)
+      dplyr::filter(.data$floor_date_m != max_date_m)
 
   }
 
   data <- data %>%
-    dplyr::group_by(dplyr::across(c( {{by}}, floor_date_m))) %>%
+    dplyr::group_by(dplyr::across(c( {{by}}, .data$floor_date_m))) %>%
     dplyr::summarise(n = dplyr::n())
 
   if (.calc_year_month_day_vars) {
 
     data <- data %>%
-      dplyr::mutate(year = lubridate::year(floor_date_m),
-                    month = lubridate::month(floor_date_m,
+      dplyr::mutate(year = lubridate::year(.data$floor_date_m),
+                    month = lubridate::month(.data$floor_date_m,
                                              label = TRUE,
                                              abbr = TRUE),
-                    day = lubridate::wday(floor_date_m,
+                    day = lubridate::wday(.data$floor_date_m,
                                           label = TRUE,
                                           abbr = TRUE)) %>%
-      dplyr::relocate(floor_date_m) %>%
-      dplyr::relocate(year,
-                      month,
-                      day,
-                      .after = floor_date_m)
+      dplyr::relocate(.data$floor_date_m) %>%
+      dplyr::relocate(.data$year,
+                      .data$month,
+                      .data$day,
+                      .after = .data$floor_date_m)
 
   }
 
