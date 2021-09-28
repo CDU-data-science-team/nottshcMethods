@@ -163,7 +163,7 @@ Details about the different methods are available here:
 #&gt;  [73] 30-39 80-89 50-59 30-39 0-9   10-19 60-69 20-29 50-59 20-29 80-89 30-39
 #&gt;  [85] 20-29 80-89 30-39 40-49 30-39 10-19 30-39 30-39 60-69 90-99 10-19 90-99
 #&gt;  [97] 90-99 70-79 60-69 20-29
-#&gt; 13 Levels: 0-9 10-19 20-29 30-39 40-49 50-59 60-69 70-79 80-89 ... 120+</div><div class='input'>
+#&gt; Levels: 0-9 10-19 20-29 30-39 40-49 50-59 60-69 70-79 80-89 90-99 100+</div><div class='input'>
 <span class='co'># Example using a data frame</span>
 <span class='fu'>tibble</span><span class='fu'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span><span class='op'>(</span>age <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>115</span>, <span class='fl'>100</span>, replace <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
   <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>age_groups <span class='op'>=</span> <span class='fu'>as_age_groups</span><span class='op'>(</span><span class='va'>age</span>, min <span class='op'>=</span> <span class='fl'>10</span>, max <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>

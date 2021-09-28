@@ -6,8 +6,4 @@ home:
   - text: Find out more about CDU Data Science Team
     href: https://cdu-data-science-team.github.io/team-blog/
 
-template:
-  bootstrap: 4
-  params:
-    ganalytics: UA-115082821-1
 
