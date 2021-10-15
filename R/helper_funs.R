@@ -64,8 +64,6 @@ as_age_groups <- function(var, min = 0, max = 120, by = 10,
 #' separate year, month, and day variable
 #'
 #' @export
-#'
-#' @examples
 calc_monthly_freq <- function(data,
                               by,
                               date_var_name,
