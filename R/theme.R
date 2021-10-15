@@ -78,6 +78,10 @@ theme_nottshc <- function(base_size = 12, base_family = "", box = FALSE) {
 ds_theme <- function(){
 
   theme <- ggplot2::theme(plot.margin = ggplot2::unit(rep(0.5, 4), "cm"),
+                          # plot background and border
+                          plot.background = ggplot2::element_blank(),
+                          panel.background = ggplot2::element_blank(),
+                          panel.border = ggplot2::element_blank(),
                           # grid lines
                           panel.grid.major = ggplot2::element_blank(),
                           panel.grid.minor = ggplot2::element_blank(),
