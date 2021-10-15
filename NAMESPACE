@@ -3,6 +3,7 @@
 export("%>%")
 export(as_age_groups)
 export(calc_monthly_freq)
+export(ds_theme)
 export(ggplotly_nottshc)
 export(hash)
 export(sample_vector)
