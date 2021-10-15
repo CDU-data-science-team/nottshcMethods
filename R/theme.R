@@ -89,7 +89,6 @@ ds_theme <- function(){
                           plot.title.position = "plot",
                           plot.title = ggplot2::element_text(size = 14,
                                                              face = "bold",
-                                                             colour = "#757575",
                                                              hjust = 0),
                           plot.subtitle = ggtext::element_markdown(size = 12,
                                                                    margin = ggplot2::margin(b = 20),
