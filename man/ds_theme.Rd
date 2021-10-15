@@ -4,12 +4,7 @@
 \alias{ds_theme}
 \title{NOTTSHC CDU data science team ggplot2 theme details}
 \usage{
-ds_theme(left_label = TRUE)
-}
-\arguments{
-\item{left_label}{Logical. Indicates whether to include the x axis labels and
-ticks which appear on the left of the chart. Default is to include and useful to exclude
-on charts specifically needed to be 'clean' for example Smoking Prevalence.}
+ds_theme()
 }
 \value{
 
@@ -28,7 +23,7 @@ Zoë Turner
 
 \section{Last updated date}{
 
-2021-04-01
+2021-10-15
 }
 
 \examples{
@@ -55,5 +50,5 @@ plot <- df \%>\%
                caption = "Source: Table KS209EW, Census 2011  |  @DataScienceNott")
 
 # style with the ds_theme putting y axis label and ticks back
-plot + nottshcMethods::ds_theme(left_label = FALSE)
+plot + nottshcMethods::ds_theme()
 }
