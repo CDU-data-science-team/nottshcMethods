@@ -42,14 +42,10 @@ theme_nottshc <- function(base_size = 12, base_family = "", box = FALSE) {
 #' @description Inspired from the chart layout
 #' used by TraffordDataLab https://github.com/traffordDataLab/assets/tree/master/theme/ggplot2
 #'
-#' @param left_label Logical. Indicates whether to include the x axis labels and
-#' ticks which appear on the left of the chart. Default is to include and useful to exclude
-#' on charts specifically needed to be 'clean' for example Smoking Prevalence.
-#'
 #' @section Last updated by:
 #' Zoë Turner
 #' @section Last updated date:
-#' 2021-04-01
+#' 2021-10-15
 #'
 #' @return
 #' @export
@@ -77,33 +73,42 @@ theme_nottshc <- function(base_size = 12, base_family = "", box = FALSE) {
 #'                caption = "Source: Table KS209EW, Census 2011  |  @DataScienceNott")
 #'
 #'# style with the ds_theme putting y axis label and ticks back
-#'plot + nottshcMethods::ds_theme(left_label = FALSE)
+#'plot + nottshcMethods::ds_theme()
 
-ds_theme <- function(left_label = TRUE){
+ds_theme <- function(){
 
   theme <- ggplot2::theme(plot.margin = ggplot2::unit(rep(0.5, 4), "cm"),
+                          # grid lines
                           panel.grid.major = ggplot2::element_blank(),
                           panel.grid.minor = ggplot2::element_blank(),
+                          # titles and captions
                           plot.title.position = "plot",
                           plot.title = ggplot2::element_text(size = 14,
-                                                             face = "bold"),
+                                                             face = "bold",
+                                                             colour = "#757575",
+                                                             hjust = 0),
                           plot.subtitle = ggtext::element_markdown(size = 12,
-                                                                   margin = ggplot2::margin(b = 20)),
+                                                                   margin = ggplot2::margin(b = 20),
+                                                                   colour = "#757575",
+                                                                   hjust = 0),
                           plot.caption = ggplot2::element_text(colour = "grey60",
                                                                margin = ggplot2::margin(t = 20, b = -10)),
+                          # legend
                           legend.position = "bottom",
+                          # axis ticks and lines
                           axis.ticks.x = ggplot2::element_line(colour = "#333333",
                                                                size = 0.5),
                           axis.line.x = ggplot2::element_line(colour = 'grey',
-                                                              size = 0.5))
+                                                              size = 0.5),
+                          # axes titles
+                          axis.title = ggplot2::element_text(colour = "#757575",
+                                                    hjust = 1),
+                          axis.text.x = ggplot2::element_text(margin = ggplot2::margin(b = 7)),
+                          axis.text.y = ggplot2::element_text(margin = ggplot2::margin(l = 7)),
+                          )
 
-  if(left_label) {
-
-    theme <- theme + ggplot2::theme(axis.title.y = ggplot2::element_blank(),
-                                    axis.text.y = ggplot2::element_blank(),
-                                    axis.ticks.y = ggplot2::element_blank())
   theme
-  }
+
 }
 
 #' Convert ggplot object into plotly
