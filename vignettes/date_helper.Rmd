@@ -1,0 +1,36 @@
+---
+title: "date_helper"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{date_helper}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(nottshcMethods)
+library(NHSRdatasets)
+```
+
+# ONS Mortality
+
+Using the {NHSRdatasets} package and particularly the ons_mortality dataset, this finds the earliest and latest years in the dataset, useful for showing or referring to the date range in a dataset.
+
+The function works with date, integer and character formats if the date is in the format yyyy-mm-dd, for example: 
+
+The ons_mortality dataset is from `r year_date(ons_mortality, date, type = "earliest")` to `year_date(ons_mortality, date, type = "latest")`
+
+```{r}
+
+year_date(ons_mortality, date, type = "earliest")
+year_date(ons_mortality, date, type = "latest")
+
+```
+
