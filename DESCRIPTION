@@ -13,8 +13,9 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Suggests: 
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
@@ -23,8 +24,10 @@ Imports:
     plotly,
     scales,
     ggplot2,
+    ggtext,
     lubridate,
     knitr,
+    stringi,
     icons (>= 0.2.0),
     xaringanExtra (>= 0.5.4),
     NHSRtheme,
@@ -36,3 +39,4 @@ Remotes:
     mitchelloharawild/icons,
     gadenbuie/xaringanExtra,
     nhs-r-community/nhsrtheme
+VignetteBuilder: knitr
