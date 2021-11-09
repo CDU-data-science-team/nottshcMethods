@@ -27,7 +27,7 @@ Imports:
     knitr,
     icons (>= 0.2.0),
     xaringanExtra (>= 0.5.4),
-    nhsrtheme (>= 0.1.0),
+    NHSRtheme,
     magrittr,
     shinydashboard,
     digest,
