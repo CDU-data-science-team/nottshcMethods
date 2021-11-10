@@ -10,6 +10,9 @@
     <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/calc_monthly_freq.html</loc>
   </url>
   <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/ds_theme.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/ggplotly_nottshc.html</loc>
   </url>
   <url>
@@ -23,5 +26,11 @@
   </url>
   <url>
     <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/theme_nottshc.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/year_date.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/articles/date_helper.html</loc>
   </url>
 </urlset>
