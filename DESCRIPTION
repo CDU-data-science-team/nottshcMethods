@@ -30,13 +30,12 @@ Imports:
     stringi,
     icons (>= 0.2.0),
     xaringanExtra (>= 0.5.4),
-    nhsrtheme (>= 0.1.0),
     magrittr,
     shinydashboard,
     digest,
-    tibble
+    tibble,
+    NHSRdatasets
 Remotes: 
     mitchelloharawild/icons,
     gadenbuie/xaringanExtra,
-    nhs-r-community/nhsrtheme
 VignetteBuilder: knitr
