@@ -23,7 +23,7 @@ The goal of nottshcMethods is to help us analyse our data faster and better.
 
 ## Installation
 
-You can install the the development version from [GitHub](https://github.com/) with:
+You can install from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
@@ -37,6 +37,15 @@ Once the package is installed, {xaringan} presentation slides with branding and 
 ```{r, echo = FALSE, out.width="50%", fig.alt="Screenshot of the templates wizard selection list with Nottshc Presentation Slides highlighted"}
 knitr::include_graphics("img/screen-capture-templates.png")
 ```
+
+# Functions
+
+## year_date()
+
+A simple function to give the 'yyyy' string to a date column (of formats date, int and character). Can be used to find the earliest and latest year date in data which is useful in reports.
+
+https://cdu-data-science-team.github.io/nottshcMethods/articles/date_helper.html
+
 
 ## Code of Conduct
   
