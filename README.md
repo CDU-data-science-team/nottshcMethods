@@ -13,8 +13,7 @@ better.
 
 ## Installation
 
-You can install the the development version from
-[GitHub](https://github.com/) with:
+You can install from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
@@ -25,10 +24,20 @@ remotes::install_github("CDU-data-science-team/nottshcMethods")
 
 Once the package is installed, {xaringan} presentation slides with
 branding and {distill} post templates can be access easily using the
-RStudio IDE, by selecting `File` -&gt; `R markdown ...` -&gt;
-`From Template`.
+RStudio IDE, by selecting `File` -\> `R markdown ...` -\> `From
+Template`.
 
 <img src="img/screen-capture-templates.png" title="Screenshot of the templates wizard selection list with Nottshc Presentation Slides highlighted" alt="Screenshot of the templates wizard selection list with Nottshc Presentation Slides highlighted" width="50%" />
+
+# Functions
+
+## year\_date()
+
+A simple function to give the ‘yyyy’ string to a date column (of formats
+date, int and character). Can be used to find the earliest and latest
+year date in data which is useful in reports.
+
+<https://cdu-data-science-team.github.io/nottshcMethods/articles/date_helper.html>
 
 ## Code of Conduct
 
