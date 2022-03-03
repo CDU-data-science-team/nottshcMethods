@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/404.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/articles/date_helper.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/authors.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/CDU-data-science-team/nottshcMethods/index.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/news/index.html</loc>
   </url>
   <url>
     <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/as_age_groups.html</loc>
@@ -19,6 +43,9 @@
     <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/hash.html</loc>
   </url>
   <url>
+    <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/index.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/pipe.html</loc>
   </url>
   <url>
@@ -29,8 +56,5 @@
   </url>
   <url>
     <loc>https://github.com/CDU-data-science-team/nottshcMethods/reference/year_date.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/CDU-data-science-team/nottshcMethods/articles/date_helper.html</loc>
   </url>
 </urlset>
