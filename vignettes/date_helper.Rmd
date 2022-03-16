@@ -16,21 +16,27 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(nottshcMethods)
-library(NHSRdatasets)
 ```
 
-# ONS Mortality
+## Dummy Data
 
-Using the {NHSRdatasets} package and particularly the ons_mortality dataset, this finds the earliest and latest years in the dataset, useful for showing or referring to the date range in a dataset.
+This create a dummy data for this experimentation
+```{r}
+# Fix the randomness to ensure same data is generated every time
+set.seed(123)
 
-The function works with date, integer and character formats if the date is in the format yyyy-mm-dd, for example: 
+dummy_data <- data.frame(
+  date = sample(seq(as.Date("2000/01/01"), by = "week", length.out = 10 * 12 * 4),
+    size = 52 * 4
+  )
+)
+```
 
-The ons_mortality dataset is from `r year_date(ons_mortality, date, type = "earliest")` to `year_date(ons_mortality, date, type = "latest")`
+Using the dummy dataset created above, this finds the earliest and latest years in the dataset, useful for showing or referring to the date range in a dataset.
 
 ```{r}
 
-year_date(ons_mortality, date, type = "earliest")
-year_date(ons_mortality, date, type = "latest")
+year_date(dummy_data, date, type = "earliest")
+year_date(dummy_data, date, type = "latest")
 
 ```
-
