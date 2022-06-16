@@ -82,26 +82,29 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">nottshcMethods</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/nhs-r-community/NHSRdatasets" class="external-link">NHSRdatasets</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">nottshcMethods</span><span class="op">)</span></code></pre></div>
 <div class="section level2">
-<h2 id="ons-mortality">ONS Mortality<a class="anchor" aria-label="anchor" href="#ons-mortality"></a>
+<h2 id="dummy-data">Dummy Data<a class="anchor" aria-label="anchor" href="#dummy-data"></a>
 </h2>
-<p>Using the {NHSRdatasets} package and particularly the ons_mortality dataset, this finds the earliest and latest years in the dataset, useful for showing or referring to the date range in a dataset.</p>
-<p>The function works with date, integer and character formats if the date is in the format yyyy-mm-dd, for example:</p>
-<p>The ons_mortality dataset is from 2010 to <code>year_date(ons_mortality, date, type = "latest")</code></p>
+<p>This create a dummy data for this experimentation</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fix the randomness to ensure same data is generated every time</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
+
+<span class="va">dummy_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>
+  date <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2000/01/01"</span><span class="op">)</span>, by <span class="op">=</span> <span class="st">"week"</span>, length.out <span class="op">=</span> <span class="fl">10</span> <span class="op">*</span> <span class="fl">12</span> <span class="op">*</span> <span class="fl">4</span><span class="op">)</span>,
+    size <span class="op">=</span> <span class="fl">52</span> <span class="op">*</span> <span class="fl">4</span>
+  <span class="op">)</span>
+<span class="op">)</span></code></pre></div>
+<p>Using the dummy dataset created above, this finds the earliest and latest years in the dataset, useful for showing or referring to the date range in a dataset.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
-<span class="fu"><a href="../reference/year_date.html">year_date</a></span><span class="op">(</span><span class="va">ons_mortality</span>, <span class="va">date</span>, type <span class="op">=</span> <span class="st">"earliest"</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 1</span></span>
-<span class="co">#&gt;   year </span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> 2010</span>
-<span class="fu"><a href="../reference/year_date.html">year_date</a></span><span class="op">(</span><span class="va">ons_mortality</span>, <span class="va">date</span>, type <span class="op">=</span> <span class="st">"latest"</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 1</span></span>
-<span class="co">#&gt;   year </span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> 2020</span></code></pre></div>
+<span class="fu"><a href="../reference/year_date.html">year_date</a></span><span class="op">(</span><span class="va">dummy_data</span>, <span class="va">date</span>, type <span class="op">=</span> <span class="st">"earliest"</span><span class="op">)</span>
+<span class="co">#&gt;   year</span>
+<span class="co">#&gt; 1 2000</span>
+<span class="fu"><a href="../reference/year_date.html">year_date</a></span><span class="op">(</span><span class="va">dummy_data</span>, <span class="va">date</span>, type <span class="op">=</span> <span class="st">"latest"</span><span class="op">)</span>
+<span class="co">#&gt;   year</span>
+<span class="co">#&gt; 1 2009</span></code></pre></div>
 </div>
   </div>
 
@@ -122,7 +125,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer>
