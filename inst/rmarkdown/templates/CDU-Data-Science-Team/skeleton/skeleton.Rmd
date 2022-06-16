@@ -3,7 +3,6 @@ title: "CDU Data Science Team &mdash; slides"
 subtitle: "Branded slides in R"
 author: "Name"
 institute: "Nottinghamshire Healthcare NHS Foundation Trust"
-date: "August 2021" 
 output:
   xaringan::moon_reader:
     css: 
@@ -39,11 +38,6 @@ library(icons) # icons need to be loaded to view so run following code if not al
 library(xaringanExtra)
 xaringanExtra::use_share_again() # need to get the slide button on html view
 
-# install.packages("devtools")
-# devtools::install_github('nhs-r-community/nhsrtheme')
-library(nhsrtheme)
-
-
 # set default options
 opts_chunk$set(echo = FALSE,
                fig.width = 7.252,
@@ -54,12 +48,6 @@ opts_chunk$set(echo = FALSE,
                warning = FALSE,
                message = FALSE,
                error = FALSE)
-
-# uncomment the following lines if you want to use the NHS-R theme colours by default
-# scale_fill_continuous <- partial(scale_fill_nhs, discrete = FALSE)
-# scale_fill_discrete <- partial(scale_fill_nhs, discrete = TRUE)
-# scale_colour_continuous <- partial(scale_colour_nhs, discrete = FALSE)
-# scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
 
 ```
 
@@ -79,11 +67,7 @@ xaringanExtra::use_logo(
 # `r rmarkdown::metadata$title`
 ----
 ## **`r rmarkdown::metadata$subtitle`**
-### `r rmarkdown::metadata$author` | `r rmarkdown::metadata$date`
-</br>
-</br>
-</br>
-</br>
+### `r rmarkdown::metadata$author` | `r format(Sys.time(), '%B %Y')` 
 
 ---
 class: inverse, middle, center
@@ -92,7 +76,8 @@ class: inverse, middle, center
 
 ### Often used for transitions
 
-Links on an inverse slide would look like<br/>[this one leading to acknowledgements](#acknowledgement)
+Links on an inverse slide would look like  
+[this one leading to acknowledgements](#acknowledgement)
 
 ---
 class: inverse-white, middle, center
@@ -101,7 +86,8 @@ class: inverse-white, middle, center
 
 ### To remove bottom image
 
-If slides overrun the bottom image this slide can be used to remove the image completely - keeping the logo unless hide-logo added to `class:` like<br/>[this one leading to a table that overruns the background](#line-highlight)
+If slides overrun the bottom image this slide can be used to remove the image completely - keeping the logo unless hide-logo added to `class:` like  
+[this one leading to a table that overruns the background](#line-highlight)
 
 ---
 
@@ -204,7 +190,7 @@ name: acknowledgement
 
 Acknowledgements: the professional look of this presentation, using NHS and Nottinghamshire Healthcare NHS Foundation Trust colour branding, exists because of the amazing work of Silvia Canelón, details of the workshops she ran at the [NHS-R Community conference](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html), Milan Wiedemann who created the CDU Data Science logo with the help of the team and Zoë Turner for putting together the slides.
 
-[`r icons::fontawesome("twitter")` @DataScienceNott](https://twitter.com/DataScienceNott)<br/>
-[`r icons::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)<br/>
+[`r icons::fontawesome("twitter")` @DataScienceNott](https://twitter.com/DataScienceNott)  
+[`r icons::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)  
 [`r icons::fontawesome("paper-plane")` cdudatascience@nottshc.nhs.uk](mailto:cdudatascience@nottshc.nhs.uk)
 
