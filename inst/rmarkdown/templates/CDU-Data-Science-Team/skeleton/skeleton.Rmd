@@ -24,7 +24,6 @@ class: title-slide, left, bottom
 
 ```{r setup, include = FALSE}
 library(knitr)
-library(tidyverse)
 
 ### Packages not on CRAN ###
 
