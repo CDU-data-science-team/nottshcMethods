@@ -1,9 +1,4 @@
-url: https://github.com/CDU-data-science-team/nottshcMethods
-
-home:
-  title: An internal R package formalising common transformations, visualisations, and analyses of clinical data
-  links:
-  - text: Find out more about CDU Data Science Team
-    href: https://cdu-data-science-team.github.io/team-blog/
-
+url: https://cdu-data-science-team.github.io/nottshcMethods/
+template:
+  bootstrap: 5
 

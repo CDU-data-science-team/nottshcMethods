@@ -39,3 +39,4 @@ Remotes:
     mitchelloharawild/icons,
     gadenbuie/xaringanExtra,
 VignetteBuilder: knitr
+URL: https://cdu-data-science-team.github.io/nottshcMethods/
